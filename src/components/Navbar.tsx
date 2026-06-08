@@ -11,19 +11,42 @@ export default function Navbar() {
           <div>
             <h1 className="text-4xl">URBAN HOME</h1>
           </div>
-          {/* Nav Links */}
           <div className="hidden md:flex space-x-8">
+            <a
+              href="#hero"
+              className="text-dark font-bold hover:text-primary transition-colors"
+            >
+              Home
+            </a>
             <a
               href="#services"
               className="text-dark font-bold hover:text-primary transition-colors"
             >
-              Services
+              Values
             </a>
             <a
               href="#team"
               className="text-dark font-bold hover:text-primary transition-colors"
             >
               Team
+            </a>
+            <a
+              href="#projects"
+              className="text-dark font-bold hover:text-primary transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="#reviews"
+              className="text-dark font-bold hover:text-primary transition-colors"
+            >
+              Testimonials
+            </a>
+            <a
+              href="#contact"
+              className="text-dark font-bold hover:text-primary transition-colors"
+            >
+              Contact us
             </a>
           </div>
 
@@ -40,22 +63,43 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* OPCJONALNIE: Skoro stan działa, musimy wyświetlić menu, gdy mobileMenuIsOpen === true */}
       {mobileMenuIsOpen && (
         <div className="md:hidden absolute top-full right-0 w-50 bg-white p-4 flex flex-col gap-4 shadow-lg">
           <a
-            href="#servicecard"
-            onClick={() => setMobileMenuIsOpen(false)}
+            href="#hero"
             className="text-black font-bold hover:text-primary transition-colors"
           >
-            Service
+            Home
           </a>
           <a
-            href="#teamcard"
-            onClick={() => setMobileMenuIsOpen(false)}
+            href="#services"
+            className="text-black font-bold hover:text-primary transition-colors"
+          >
+            Values
+          </a>
+          <a
+            href="#team"
             className="text-black font-bold hover:text-primary transition-colors"
           >
             Team
+          </a>
+          <a
+            href="#projects"
+            className="text-black font-bold hover:text-primary transition-colors"
+          >
+            Projects
+          </a>
+          <a
+            href="#reviews"
+            className="text-black font-bold hover:text-primary transition-colors"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#contact"
+            className="text-black font-bold hover:text-primary transition-colors"
+          >
+            Contact us
           </a>
         </div>
       )}

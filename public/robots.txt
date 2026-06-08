@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Blokowanie dostępu do podstron systemowych i prywatnych
+Disallow: /admin/

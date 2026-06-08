@@ -1,13 +1,17 @@
-import project from "../assets/project.jpg";
+import project from "../assets/project.webp";
 
 export default function Projects() {
   return (
-    <section className="h-screen py-20 flex flex-col bg-neutral-900">
+    <section
+      id="projects"
+      className="h-screen py-20 flex flex-col bg-neutral-900"
+    >
       <div className="mx-8 flex flex-col pb-10">
         <h2 className="text-white">Our Projects</h2>
         <p className="text-white">
-          Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei,
-          at nihil tantas platonem eos.
+          We design modern, functional, and timeless homes tailored to
+          individual needs. Each project combines aesthetics, comfort, and
+          practical solutions.
         </p>
       </div>
       <div className="mx-3 min-h-3/4">
@@ -16,7 +20,9 @@ export default function Projects() {
           style={{ backgroundImage: `url(${project})` }}
         >
           <div className="w-full bg-linear-to-t from-black to-transparent px-8 pb-14 pt-50">
-            <a href="" className="text-white underline text-2xl">Zobacz nasze projekty →</a>
+            <a href="#" className="text-white underline text-2xl">
+              View our projects →
+            </a>
           </div>
         </div>
       </div>

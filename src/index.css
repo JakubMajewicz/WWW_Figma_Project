@@ -75,4 +75,8 @@
     h3 { font-size: var(--text-h3); }
     h4 { font-size: var(--text-h4); }
   }
+
+  html {
+  scroll-behavior: smooth;
+}
 }
