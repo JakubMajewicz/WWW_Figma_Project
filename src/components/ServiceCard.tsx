@@ -88,26 +88,32 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="bg-black pb-20">
-      <div className="mx-8 py-20 flex flex-col gap-10">
-        <h2 className="text-white">Company Values</h2>
-        <p className="text-white">
-          We provide end-to-end architectural solutions — from concept and
-          design, through construction, to long-term support for your project.
+      <div className="mx-8 py-20 flex flex-col gap-10 items-start lg:items-center">
+        <h2 className="text-white text-left lg:text-center">Company Values</h2>
+        <p className="text-white text-left lg:text-center">
+          We provide end-to-end architectural solutions — from concept and design,
+          through construction, to long-term support for your project.
         </p>
       </div>
 
-      <div>
+      {/* GRID */}
+      <div className="mx-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         {services.map((service, index) => (
           <div
             key={index}
-            className="mx-8 flex flex-col max-w-xs pt-20 first:pt-0"
+            className="flex flex-col max-w-xs"
           >
             <div className="w-20 h-20 flex items-center justify-center border border-primary text-primary">
               {service.icon}
             </div>
 
-            <h3 className="text-white pb-5 pt-10">{service.title}</h3>
-            <p className="text-white pb-10">{service.description}</p>
+            <h3 className="text-white pb-5 pt-10">
+              {service.title}
+            </h3>
+
+            <p className="text-white pb-10">
+              {service.description}
+            </p>
           </div>
         ))}
       </div>

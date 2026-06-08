@@ -36,31 +36,35 @@ export default function Team() {
       id="team"
       className="py-20 bg-linear-to-t from-gray-300/20 to-transparent"
     >
-      <div className="mx-8 mb-20 flex flex-col gap-10">
-        <h2>Meet Our Expert Team</h2>
-        <p>
+      <div className="mx-8 mb-20 flex flex-col gap-10 items-start lg:items-center">
+        <h2 className="text-left lg:text-center">Meet Our Expert Team</h2>
+        <p className="text-left lg:text-center">
           Our team combines architectural expertise, construction experience,
           and creative vision to deliver homes that are both functional and
           beautifully designed.
         </p>
       </div>
 
-      <div className="mx-8 mt-20">
+      {/* GRID */}
+      <div className="mx-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex items-start flex-col py-10 first:pt-0 last:pb-0"
+            className="flex flex-col items-start lg:items-center pb-10 first:pt-0 last:pb-0"
           >
             <div className="pb-10">
               <img
                 src={member.image}
-                alt=""
+                alt={member.name}
                 className="w-75 h-75 object-cover rounded-full"
               />
             </div>
+
             <div>
               <p className="text-black">{member.role}</p>
-              <p className="text-black font-bold text-3xl">{member.name}</p>
+              <p className="text-black font-bold text-3xl">
+                {member.name}
+              </p>
               <p className="text-black">{member.desc}</p>
             </div>
           </div>

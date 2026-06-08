@@ -10,14 +10,20 @@ export default function Hero() {
     >
       <div className="w-full h-full bg-linear-to-t from-black to-transparent px-8 pb-14 flex flex-col justify-center">
         <h1 className="text-white mb-10">Design your dream home</h1>
-        <p className="text-white mb-15">
+        <p className="text-white mb-15 lg:w-100">
           We create modern and functional house designs tailored to your needs.
           From concept to detailed architectural plans, we help you bring your
           dream home to life with precision, style, and comfort.
         </p>
 
         <div className="flex justify-between">
-          <Button onClick={() => console.log("Kliknięto!")}>
+          <Button
+            onClick={() => {
+              document.getElementById("services")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
             Learn more about us
           </Button>
         </div>
