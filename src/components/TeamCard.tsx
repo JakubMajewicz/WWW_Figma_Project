@@ -3,7 +3,14 @@ import person02 from "../assets/person2.webp";
 import person03 from "../assets/person3.webp";
 import person04 from "../assets/person4.webp";
 
-const teamMembers = [
+interface Team {
+  name: string;
+  role: string;
+  desc: string;
+  image: string;
+}
+
+const teamMembers: Team[] = [
   {
     name: "Sebastian Bennett",
     role: "Founder & Principal Architect",

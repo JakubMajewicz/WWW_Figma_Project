@@ -1,4 +1,10 @@
-const services = [
+interface Service {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const services: Service[] = [
   {
     title: "Architectural Consultation",
     description:
